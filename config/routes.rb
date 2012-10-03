@@ -1,4 +1,6 @@
 BestBay::Application.routes.draw do
+  resources :bids
+
   resources :auctions
 
   get "users/new"

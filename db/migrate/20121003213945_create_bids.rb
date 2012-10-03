@@ -3,7 +3,7 @@ class CreateBids < ActiveRecord::Migration
     create_table :bids do |t|
       t.integer :auction_id
       t.integer :bidder_id
-      t.integer :price
+      t.decimal :price
 
       t.timestamps
     end
