@@ -5,7 +5,7 @@ describe "auctions/show" do
     @auction = assign(:auction, stub_model(Auction,
       :base_price => "9.99",
       :description => "Description",
-      :increment => "9.99",
+      :bid_increment => "9.99",
       :keywords => "Keywords",
       :picture => "Picture",
       :reserve_price => "9.99",

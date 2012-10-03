@@ -4,7 +4,7 @@ FactoryGirl.define do
   factory :auction do
     base_price "9.99"
     description "MyString"
-    increment "9.99"
+    bid_increment "9.99"
     keywords "MyString"
     picture "MyString"
     reserve_price "9.99"

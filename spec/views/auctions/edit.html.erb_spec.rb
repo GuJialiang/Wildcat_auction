@@ -5,7 +5,7 @@ describe "auctions/edit" do
     @auction = assign(:auction, stub_model(Auction,
       :base_price => "9.99",
       :description => "MyString",
-      :increment => "9.99",
+      :bid_increment => "9.99",
       :keywords => "MyString",
       :picture => "MyString",
       :reserve_price => "9.99",
@@ -21,7 +21,7 @@ describe "auctions/edit" do
     assert_select "form", :action => auctions_path(@auction), :method => "post" do
       assert_select "input#auction_base_price", :name => "auction[base_price]"
       assert_select "input#auction_description", :name => "auction[description]"
-      assert_select "input#auction_increment", :name => "auction[increment]"
+      assert_select "input#auction_bid_increment", :name => "auction[bid_increment]"
       assert_select "input#auction_keywords", :name => "auction[keywords]"
       assert_select "input#auction_picture", :name => "auction[picture]"
       assert_select "input#auction_reserve_price", :name => "auction[reserve_price]"
