@@ -11,12 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20121003215510) do
 
   create_table "auctions", :force => true do |t|
     t.decimal  "base_price"
     t.string   "description"
-    t.decimal  "increment"
+    t.decimal  "bid_increment"
     t.string   "keywords"
     t.string   "picture"
     t.decimal  "reserve_price"
@@ -24,6 +24,24 @@ ActiveRecord::Schema.define(:version => 0) do
     t.string   "title"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "bids", :force => true do |t|
+    t.integer  "auction_id"
+    t.integer  "bidder_id"
+    t.decimal  "price"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "type"
+    t.string   "username"
+    t.string   "email"
+    t.string   "name"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "password_digest"
   end
 
 end
