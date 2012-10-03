@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Base price:</b>
+  <%= @auction.base_price %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @auction.description %>
+</p>
+
+<p>
+  <b>Increment:</b>
+  <%= @auction.increment %>
+</p>
+
+<p>
+  <b>Keywords:</b>
+  <%= @auction.keywords %>
+</p>
+
+<p>
+  <b>Picture:</b>
+  <%= @auction.picture %>
+</p>
+
+<p>
+  <b>Reserve price:</b>
+  <%= @auction.reserve_price %>
+</p>
+
+<p>
+  <b>Seller:</b>
+  <%= @auction.seller_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @auction.title %>
+</p>
+
+
+<%= link_to 'Edit', edit_auction_path(@auction) %> |
+<%= link_to 'Back', auctions_path %>

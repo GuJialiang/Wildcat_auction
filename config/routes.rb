@@ -1,4 +1,6 @@
 BestBay::Application.routes.draw do
+  resources :auctions
+
   get "users/new"
 
   # The priority is based upon order of creation:
